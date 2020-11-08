@@ -1,0 +1,26 @@
+<form [formGroup]="_form" id="IdeaForm">
+    <div class="container">
+        <h3>Login</h3>
+        <div class="row top-buffer">
+            <div class="col-2">
+                <label class="control-label">User Name:</label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" formControlName="UserName" maxlength="20" minlength="5">
+            </div>
+        </div>
+        <div class="row top-buffer">
+            <div class="col-2">
+                <label class="control-label">Password:</label>
+            </div>
+            <div class="col-3">
+                <input type="password" class="form-control" formControlName="Password" maxlength="20" minlength="5">
+            </div>
+        </div>
+        <div class="row top-buffer">
+            <div class="col-5">
+                <button class="btn btn-primary" (click)="login();">Login</button>
+            </div>
+        </div>
+    </div>
+</form>

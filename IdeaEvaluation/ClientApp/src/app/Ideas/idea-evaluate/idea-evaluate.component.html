@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row top-buffer">
+    <div class="col-md-8">
+      <h4>Assigned Ideas</h4>
+    </div>
+    <div class="col-md-1">
+      <a [routerLink]="['']"class="btn-link">Sign Out</a>
+    </div>
+  </div>
+  <div class="row top-buffer">
+    <div class="col-md-9">
+      <table class="table table-bordered">
+        <tr class="d-table-row">
+          <th>Idea Id</th>
+          <th>Idea Name</th>
+          <th>Idea Description</th>
+          <th>Action</th>
+        </tr>
+        <tr class="d-table-row" *ngFor="let idea of ideas">
+          <td>{{idea.id}}</td>
+          <td>{{idea.name}}</td>
+          <td>{{idea.description}}</td>
+          <td><input type="button" value="Evaluate" class="btn btn-primary" (click)="showAlert();" /></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
